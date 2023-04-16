@@ -16,5 +16,5 @@ import TheFooter from 'components/footer/TheFooter.vue';
 </script>
 
 <style scoped lang="scss">
-@import 'assets/scss/layouts/default-layout';
+@import 'assets/scss/layouts/DefaultLayout';
 </style>
