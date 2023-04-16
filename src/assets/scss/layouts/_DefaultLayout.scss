@@ -4,12 +4,16 @@
 
   min-height: 100vh;
 
+  background-color: $clr-bg;
+
   &__header {
     flex-shrink: 0;
   }
 
   &__content {
     flex-grow: 1;
+
+    padding-block: rem($gap-l);
   }
 
   &__footer {
