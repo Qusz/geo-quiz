@@ -1,0 +1,79 @@
+/**
+* Colors
+*/
+
+
+
+/**
+* Fonts
+*/
+$font-path: 'assets/fonts';
+$font-family-fallback: 'Arial', 'Helvetica', sans-serif;
+$font-family-openSans: 'Open Sans';
+$font-family-default: $font-family-openSans, $font-family-fallback;
+
+$font-size-base: 16px;
+
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-48: 48px;
+
+
+
+/**
+* Breakpoints 
+*/
+$screen-mobile: '(max-width: 768px)';
+$screen-tablet: '(max-width: 1366px)';
+
+
+
+/**
+* Layout
+*/
+$container-width: 1440px;
+$container-horizontal-padding: 20px;
+
+
+
+/**
+* Size
+*/
+$gap-xxs: 10px;
+$gap-xs: 15px;
+$gap-s: 20px;
+$gap-m: 25px;
+$gap-base: 30px;
+$gap-l: 60px;
+$gap-xl: 80px;
+
+
+
+/**
+* Transitions and Animations
+*/
+$default-transition-duration: .2s;
+$default-transiton-type: ease-in-out;
+$default-transition: all $default-transition-duration $default-transiton-type;
+
+
+
+/**
+* Borders
+*/
+
+
+
+/**
+* Box-shadow
+*/
+
+
+
+/**
+* Z-index
+*/

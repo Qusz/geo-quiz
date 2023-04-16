@@ -1,0 +1,44 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist/",
+    "paths": {
+      "@/*": ["./src/*"],
+      "components/*": ["./src/components/*"],
+      "composables/*": ["./src/composables/*"],
+      "views/*": ["./src/views/*"],
+      "assets/*": ["./src/assets/*"],
+      "types/*": ["./src/types/*"],
+      "utils/*": ["./src/utils/*"],
+      "stores/*": ["./src/stores/*"],
+      "router/*": ["./src/router/*"]
+    },
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es2022",
+    "moduleResolution": "node",
+    "target": "ES2021",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "lib": ["DOM", "ES2021"],
+    "ignoreDeprecations": "5.0"
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

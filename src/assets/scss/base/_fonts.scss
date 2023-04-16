@@ -1,0 +1,5 @@
+@font-face {
+  $font-name: "OpenSans-VariableFont";
+  font-family: $font-family-openSans;
+  src: url("#{$font-path}/#{$font-name}.ttf"), format('true-type');
+}

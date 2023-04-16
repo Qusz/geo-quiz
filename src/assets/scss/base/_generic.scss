@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-default;
+
+  position: relative;
+  
+  overflow-x: hidden;
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
