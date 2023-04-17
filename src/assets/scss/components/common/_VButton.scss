@@ -1,0 +1,52 @@
+.button {
+  all: unset;
+
+  font-size: rem($font-size-18);
+  font-weight: $font-weight-medium;
+
+  display: block;
+
+  padding: rem($gap-xxs) rem($gap-s);
+
+  cursor: pointer;
+  user-select: none;
+  transition: all .1s $default-transiton-type;
+
+  border-radius: rem($border-radius-small);
+
+  &--green {
+    @include button-color($cutty-sark, $clr-text-inverse);
+  }
+
+  &--sienna {
+    @include button-color($burnt-sienna, $clr-text-inverse);
+  }
+
+  &--white {
+    background-color: $white;
+
+    box-shadow: $box-shadow-base;
+
+    &:hover {
+      color: $burnt-sienna;
+    }
+
+    &:active {
+      color: $clr-text;
+    }
+  }
+
+  &--plain {
+    padding: 0;
+
+    border-radius: none;
+    
+    &:hover {
+      color: $burnt-sienna;
+    }
+
+    &:active {
+      color: $clr-text;
+    }
+  }
+}
