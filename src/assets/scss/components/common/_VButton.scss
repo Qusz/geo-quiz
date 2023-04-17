@@ -1,11 +1,12 @@
 .button {
   all: unset;
 
+  @include flex-center;
+
   font-size: rem($font-size-18);
   font-weight: $font-weight-medium;
 
-  display: block;
-
+  min-width: rem(80px);
   padding: rem($gap-xxs) rem($gap-s);
 
   cursor: pointer;
