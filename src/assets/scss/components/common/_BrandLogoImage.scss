@@ -1,0 +1,9 @@
+.brand-logo-image {
+  &__wrapper {
+    width: rem(100px);
+  }
+  
+  &__image {
+    object-fit: contain
+  }
+}
