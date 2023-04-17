@@ -1,0 +1,6 @@
+.navbar-items {
+  @include list-reset;
+  @include flex-center;
+
+  gap: rem($gap-xs);
+}
