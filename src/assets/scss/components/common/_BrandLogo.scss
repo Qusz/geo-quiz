@@ -1,0 +1,16 @@
+.brand-logo {
+  cursor: pointer;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem($gap-xxs);
+  }
+
+  &__text {
+    font-size: rem($font-size-32);
+    font-weight: $font-weight-bold;
+
+    color: $cutty-sark;
+  }
+}
