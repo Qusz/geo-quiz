@@ -1,0 +1,15 @@
+.sheet {
+  max-width: rem(768px);
+
+  border-radius: rem($border-radius-medium);
+  background-color: $white;
+  box-shadow: $box-shadow-base;
+
+  &--fluid {
+    max-width: unset;
+  }
+
+  &__wrapper {
+    padding: rem($gap-m);
+  }
+}
