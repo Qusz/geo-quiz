@@ -1,0 +1,16 @@
+.footer-copyright {
+  &__caption {
+    font-size: rem($font-size-16);
+    font-weight: $font-weight-medium;
+
+    margin: 0;
+  }
+
+  &__link {
+    color: $cutty-sark;
+
+    &:hover {
+      color: lighten($cutty-sark, 10);
+    }
+  }
+}
