@@ -1,0 +1,10 @@
+.footer {
+  background-color: $white;
+  box-shadow: $box-shadow-bottom;
+
+  &__wrapper {
+    @include flex-center;
+
+    padding-block: rem($gap-m);
+  }
+}
