@@ -1,0 +1,11 @@
+.navbar {
+  background-color: $white;
+  box-shadow: $box-shadow-top;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    padding-block: rem($gap-xxs);
+  }
+}
