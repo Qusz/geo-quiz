@@ -52,10 +52,15 @@ export const useGameState = defineStore('gameState', () => {
     }
   };
 
+  const $reset = () => {
+    gameState.value = 'default';
+  };
+
   return {
     gameState,
     toMenu,
     startGame,
-    finishGame
+    finishGame,
+    $reset
   };
 });
