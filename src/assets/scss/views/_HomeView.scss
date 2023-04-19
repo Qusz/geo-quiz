@@ -1,0 +1,50 @@
+.home {
+  &__content {
+    flex-grow: 1;
+  
+    min-height: rem(400px);
+
+    & > * {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  &__title {
+    @include text-title;
+
+    text-align: center;
+  }
+
+  &__text-block {
+    @include text-base;
+
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+
+    &-list {
+      @include list-reset;
+
+      font-weight: $font-weight-medium;
+
+      display: flex;
+      flex-direction: column;
+      gap: rem($gap-xxs);
+    }
+  }
+
+  &__play-button {
+    align-self: center;
+
+    margin-top: rem($gap-l);
+  }
+}
