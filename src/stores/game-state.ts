@@ -19,6 +19,8 @@ export const useGameState = defineStore('gameState', () => {
   };
 
   const startGame = () => {
+    if (gameState.value === 'play') return;
+
     gameState.value = 'play';
 
     try {
@@ -45,7 +47,9 @@ export const useGameState = defineStore('gameState', () => {
   };
 
   const finishGame = () => {
-    gameState.value = 'game-over';
+    if (gameState.value !== 'game-over') {
+      gameState.value = 'game-over';
+    }
   };
 
   return {
