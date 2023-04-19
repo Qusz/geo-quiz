@@ -4,10 +4,8 @@
   
     min-height: rem(400px);
 
-    & > * {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
   }
 
   &__wrapper {
@@ -45,6 +43,6 @@
   &__play-button {
     align-self: center;
 
-    margin-top: rem($gap-l);
+    margin-top: rem($gap-m);
   }
 }
