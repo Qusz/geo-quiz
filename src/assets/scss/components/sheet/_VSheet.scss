@@ -1,5 +1,6 @@
 .sheet {
   max-width: rem(768px);
+  padding: rem($gap-m);
 
   border-radius: rem($border-radius-medium);
   background-color: $white;
@@ -7,9 +8,5 @@
 
   &--fluid {
     max-width: unset;
-  }
-
-  &__wrapper {
-    padding: rem($gap-m);
   }
 }

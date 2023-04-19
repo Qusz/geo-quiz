@@ -6,9 +6,7 @@ const props = defineProps<{
 
 <template>
   <div :class="['sheet', { 'sheet--fluid': fluid }]">
-    <div class="sheet__wrapper">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
