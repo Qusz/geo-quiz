@@ -23,11 +23,16 @@ export const useGameMode = defineStore('gameMode', () => {
     gameMode.value = 'country-by-capital';
   };
 
+  const $reset = () => {
+    gameMode.value = undefined;
+  };
+
   return {
     gameMode,
     playCapitalByCountry,
     playCountryByCapital,
     playCountryByFlag,
-    playFlagByCountry
+    playFlagByCountry,
+    $reset
   };
 });
