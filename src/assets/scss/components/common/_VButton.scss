@@ -1,18 +1,17 @@
 .button {
-  all: unset;
-
   @include flex-center;
 
   font-size: rem($font-size-18);
   font-weight: $font-weight-medium;
 
-  min-width: rem(80px);
+  min-width: rem(120px);
   padding: rem($gap-xxs) rem($gap-s);
 
   cursor: pointer;
   user-select: none;
   transition: all .1s $default-transiton-type;
 
+  border: none;
   border-radius: rem($border-radius-small);
 
   &--green {
@@ -38,6 +37,7 @@
   }
 
   &--plain {
+    min-width: unset;
     padding: 0;
 
     border-radius: none;
