@@ -1,0 +1,6 @@
+.list-item {
+  &::before {
+    content: '🏴';
+    padding-right: rem($gap-xxs);
+  }
+}
