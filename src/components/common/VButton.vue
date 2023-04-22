@@ -6,6 +6,7 @@ const props = defineProps<{
   color?: ButtonColor;
   shape?: ButtonShape;
   type?: ButtonType;
+  block?: boolean;
 }>();
 </script>
 
@@ -18,7 +19,8 @@ const props = defineProps<{
         'button--green': color === 'green',
         'button--white': color === 'white',
         'button--sienna': color === 'sienna',
-        'button--plain': shape === 'plain'
+        'button--plain': shape === 'plain',
+        'button--block': block === true
       }
     ]"
     :type="type"
