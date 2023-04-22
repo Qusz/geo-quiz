@@ -1,0 +1,14 @@
+.game-interface-question {
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    font-size: rem($font-size-32);
+    font-weight: $font-weight-medium;
+  }
+}
