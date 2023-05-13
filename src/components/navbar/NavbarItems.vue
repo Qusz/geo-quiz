@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import type { NavbarItemType } from '@/types';
+import { useAppState } from '@/stores/app-state';
 import NavbarItem from './NavbarItem.vue';
+
+const appState = useAppState();
 
 const navbarItems: NavbarItemType[] = [
   {
     name: 'New Game',
-    route: 'NewGame',
     tag: 'div',
-    buttonColor: 'green'
+    buttonColor: 'green',
+    action: () => appState.toMenu()
   }
 ];
 </script>
@@ -21,6 +24,7 @@ const navbarItems: NavbarItemType[] = [
       :button-tag="item.tag"
       :button-color="item.buttonColor"
       :button-shape="item.buttonShape"
+      @click="item.action && item.action()"
     >
       {{ item.name }}
     </navbar-item>
