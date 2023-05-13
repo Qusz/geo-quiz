@@ -1,6 +1,18 @@
 /**
 * Colors
 */
+$white: #ffffff;
+$black: #000000;
+$thunder: #242124;
+$wild-sand: #F5F5F5;
+$aqua-haze: #EFF5F5;
+$geyser: #D6E4E5;
+$cutty-sark: #497174;
+$burnt-sienna: #EB6440;
+
+$clr-text: $thunder;
+$clr-text-inverse: $wild-sand;
+$clr-bg: $aqua-haze; 
 
 
 
@@ -20,7 +32,12 @@ $font-size-16: 16px;
 $font-size-18: 18px;
 $font-size-20: 20px;
 $font-size-24: 24px;
+$font-size-32: 32px;
 $font-size-48: 48px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
 
 
 
@@ -65,15 +82,21 @@ $default-transition: all $default-transition-duration $default-transiton-type;
 /**
 * Borders
 */
+$border-radius-small: 8px;
+$border-radius-medium: 12px;
 
 
 
 /**
 * Box-shadow
 */
+$box-shadow-base: 0px 2px 8px 0px rgba(99, 99, 99, 0.2) ;
+$box-shadow-top: 0px 4px 6px 0px rgba(34, 60, 80, 0.2);
+$box-shadow-bottom: 0px -4px 6px 0px rgba(34, 60, 80, 0.2);
 
 
 
 /**
 * Z-index
 */
+$z-index-overlay: 10;
