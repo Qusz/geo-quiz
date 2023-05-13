@@ -4,8 +4,9 @@ import type { ButtonTag } from './button-tag';
 
 export interface NavbarItemType {
   name: string;
-  route: string;
   tag: ButtonTag;
+  route?: string;
   buttonColor?: ButtonColor;
   buttonShape?: ButtonShape;
+  action?: () => void;
 }
