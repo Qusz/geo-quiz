@@ -8,12 +8,6 @@ const navbarItems: NavbarItemType[] = [
     route: 'NewGame',
     tag: 'div',
     buttonColor: 'green'
-  },
-  {
-    name: 'Your Stats',
-    route: 'PlayerStats',
-    tag: 'div',
-    buttonShape: 'plain'
   }
 ];
 </script>
