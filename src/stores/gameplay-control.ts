@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import type { RestCountriesSorted } from '@/types';
+import type { RestCountriesSorted, AnswerState } from '@/types';
 
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
@@ -11,8 +11,6 @@ import ArrayControl from '@/utils/array-control';
 export const useGameplayControl = defineStore('gameplay-control', () => {
   let currentCountryIndex: number;
   const amountOfOptions = 4;
-
-  type AnswerState = 'initial' | 'correct' | 'incorrect' | undefined;
 
   const gameData: Ref<RestCountriesSorted[]> = ref([]);
   const usedCountries: Ref<number[]> = ref([]);
