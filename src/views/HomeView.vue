@@ -1,18 +1,18 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 import VSheet from 'components/sheet/VSheet.vue';
 import VButton from 'components/common/VButton.vue';
 import ListItem from 'components/common/ListItem.vue';
 
-import { useGameState } from 'stores/game-state';
+import { GAME_MODES } from '@/constants';
+import { useAppState } from '@/stores/app-state';
 
-const gameState = useGameState();
+const appState = useAppState();
 
-const listItems = [
-  'Flag by country',
-  'Country by flag',
-  'Capital by country',
-  'Country by capital'
-];
+onMounted(() => {
+  appState.$reset();
+});
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const listItems = [
           </p>
 
           <ul class="home__text-block-list">
-            <list-item v-for="(item, index) in listItems" :key="index" :tag="'li'">
+            <list-item v-for="(item, index) in GAME_MODES" :key="index" :tag="'li'">
               {{ item }}
             </list-item>
           </ul>
@@ -37,7 +37,7 @@ const listItems = [
           :tag="'button'"
           :type="'button'"
           :color="'green'"
-          @click="() => gameState.toMenu()"
+          @click="() => appState.toMenu()"
         >
           Play
         </v-button>
