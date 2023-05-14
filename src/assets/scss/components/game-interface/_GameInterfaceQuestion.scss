@@ -2,9 +2,21 @@
   display: flex;
   justify-content: center;
 
-  &__img {
+  &__flag {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    width: rem(320px);
+    height: rem(180px);
+
+
+    &-img {
+      max-height: 100%;
+      object-fit: contain;
+
+     filter: drop-shadow(0px 8px 9px rgba(0, 0, 0, .3));
+
+    }
   }
 
   &__text {
