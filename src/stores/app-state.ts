@@ -25,19 +25,15 @@ export const useAppState = defineStore('app-state', () => {
       switch (mode) {
         case 'flag-by-country':
           gameMode.value = 'flag-by-country';
-          routes.toFlagByCountry();
           break;
         case 'country-by-flag':
           gameMode.value = 'country-by-flag';
-          routes.toCountryByFlag();
           break;
         case 'capital-by-country':
           gameMode.value = 'capital-by-country';
-          routes.toCapitalByCountry();
           break;
         case 'country-by-capital':
           gameMode.value = 'country-by-capital';
-          routes.toCountryByCapital();
           break;
         case undefined:
           break;
@@ -48,6 +44,8 @@ export const useAppState = defineStore('app-state', () => {
       // TODO add error handling
       console.log(error);
     }
+
+    routes.toPlay();
   };
 
   const loseGame = () => {
