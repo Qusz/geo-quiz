@@ -15,4 +15,8 @@ export default class Routes {
   toMainMenu() {
     this.router.push('new-game');
   }
+
+  toPlay() {
+    this.router.push('play');
+  }
 }
