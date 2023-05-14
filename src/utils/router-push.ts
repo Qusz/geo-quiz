@@ -15,24 +15,4 @@ export default class Routes {
   toMainMenu() {
     this.router.push('new-game');
   }
-
-  toCapitalByCountry() {
-    this.router.push('capitbal-by-coutry');
-  }
-
-  toCountryByCapital() {
-    this.router.push('country-by-capital');
-  }
-
-  toCountryByFlag() {
-    this.router.push('country-by-flag');
-  }
-
-  toFlagByCountry() {
-    this.router.push('flag-by-country');
-  }
-
-  toStats() {
-    this.router.push('stats');
-  }
 }
