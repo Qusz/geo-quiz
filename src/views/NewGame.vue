@@ -1,24 +1,17 @@
 <script setup lang="ts">
-import { onMounted, watch } from 'vue';
+import { onMounted } from 'vue';
 
 import VButton from 'components/common/VButton.vue';
 import VSheet from 'components/sheet/VSheet.vue';
 
-import { storeToRefs } from 'pinia';
-import { useGameState } from 'stores/game-state';
-import { useGameMode } from 'stores/game-mode';
+import { GAME_MODES } from '@/constants';
+import { useAppState } from '@/stores/app-state';
+import { kebabToPlain } from 'utils/kebab-to-plain';
 
-const gameState = useGameState();
-const gameModeState = useGameMode();
-
-const { gameMode } = storeToRefs(gameModeState);
+const appState = useAppState();
 
 onMounted(() => {
-  gameState.$reset();
-});
-
-watch(gameMode, () => {
-  gameState.startGame();
+  appState.gameModeReset();
 });
 </script>
 
@@ -28,17 +21,14 @@ watch(gameMode, () => {
       <v-sheet class="new-game__content">
         <h1 class="new-game__title">Pick your game mode</h1>
         <div class="new-game__options">
-          <v-button :tag="'button'" :color="'green'" @click="gameModeState.playFlagByCountry">
-            Flag by country
-          </v-button>
-          <v-button :tag="'button'" :color="'green'" @click="gameModeState.playCountryByFlag">
-            Country by flag
-          </v-button>
-          <v-button :tag="'button'" :color="'green'" @click="gameModeState.playCapitalByCountry">
-            Capital by country
-          </v-button>
-          <v-button :tag="'button'" :color="'green'" @click="gameModeState.playCountryByCapital">
-            Country by capital
+          <v-button
+            v-for="(item, index) in GAME_MODES"
+            :key="index"
+            :tag="'button'"
+            :color="'green'"
+            @click="appState.startGame(item)"
+          >
+            {{ kebabToPlain(item!) }}
           </v-button>
         </div>
       </v-sheet>
