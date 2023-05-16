@@ -7,5 +7,5 @@
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/common/BrandLogoImage';
+@import './BrandLogoImage';
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BrandLogoImage from './BrandLogoImage.vue';
+import BrandLogoImage from '../BrandLogoImage/BrandLogoImage.vue';
 </script>
 
 <template>
@@ -12,5 +12,5 @@ import BrandLogoImage from './BrandLogoImage.vue';
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/common/BrandLogo';
+@import './BrandLogo';
 </style>

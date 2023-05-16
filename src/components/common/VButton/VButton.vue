@@ -32,5 +32,5 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/common/VButton';
+@import './VButton';
 </style>

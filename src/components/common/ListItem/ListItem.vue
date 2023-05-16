@@ -13,5 +13,5 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/common/ListItem';
+@import './ListItem';
 </style>
