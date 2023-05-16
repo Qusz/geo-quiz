@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { NavbarItemType } from '@/types';
 import { useAppState } from '@/stores/app-state';
-import NavbarItem from './NavbarItem.vue';
+import NavbarItem from '../NavbarItem/NavbarItem.vue';
 
 const appState = useAppState();
 
@@ -32,5 +32,5 @@ const navbarItems: NavbarItemType[] = [
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/navbar/NavbarItems';
+@import './NavbarItems';
 </style>

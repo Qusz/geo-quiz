@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BrandLogo from 'components/common/BrandLogo.vue';
-import NavbarItems from './NavbarItems.vue';
+import BrandLogo from 'components/common/BrandLogo/BrandLogo.vue';
+import NavbarItems from '../NavbarItems/NavbarItems.vue';
 </script>
 
 <template>
@@ -15,5 +15,5 @@ import NavbarItems from './NavbarItems.vue';
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/navbar/TheNavbar';
+@import './TheNavbar';
 </style>

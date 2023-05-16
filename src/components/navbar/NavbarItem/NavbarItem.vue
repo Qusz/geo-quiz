@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VButton from 'components/common/VButton.vue';
+import VButton from 'components/common/VButton/VButton.vue';
 
 import type { ButtonColor, ButtonTag, ButtonShape, ButtonType } from '@/types';
 
@@ -20,5 +20,5 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/navbar/NavbarItem';
+@import './NavbarItem';
 </style>
