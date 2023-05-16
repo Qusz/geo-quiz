@@ -38,7 +38,7 @@ const gameplayControl = useGameplayControl();
           class="game-interface-options__item"
           @click="gameplayControl.getUserAnswer(gameplayControl.answers[index])"
         >
-          <img :src="url" alt="flag" />
+          <img class="game-interface-options__item-flag" :src="url" alt="flag" />
         </button>
       </div>
     </div>
