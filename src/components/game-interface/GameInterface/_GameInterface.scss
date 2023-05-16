@@ -1,0 +1,10 @@
+.game-interface {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+}

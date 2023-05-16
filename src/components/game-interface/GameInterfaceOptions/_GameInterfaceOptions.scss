@@ -1,0 +1,47 @@
+.game-interface-options {
+  margin-top: rem($gap-l);
+
+  &--flags & {
+    &__item {
+      all: unset;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: rem(250px);
+      height: rem(180px);
+
+      cursor: pointer;
+
+      filter: $drop-shadow-default;
+      &-flag {
+        object-fit: contain;
+        max-height: 100%;
+
+        position: relative;
+
+        transition: $default-transition;
+
+        &:hover {
+          opacity: .8;
+        }
+
+    
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: rem($gap-xs);
+
+    @media #{$screen-mobile} {
+      grid-template-columns: 1fr;
+    }
+  }
+}
