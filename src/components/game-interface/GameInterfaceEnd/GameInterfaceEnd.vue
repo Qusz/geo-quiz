@@ -39,5 +39,5 @@ const gameplayControl = useGameplayControl();
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/scss/components/game-interface/GameInterfaceEnd';
+@import './GameInterfaceEnd';
 </style>

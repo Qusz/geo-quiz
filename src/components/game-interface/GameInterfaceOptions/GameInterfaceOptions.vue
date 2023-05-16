@@ -2,7 +2,7 @@
 import { useGameplayControl } from '@/stores/gameplay-control';
 import { useAppState } from '@/stores/app-state';
 
-import VButton from 'components/common/VButton.vue';
+import VButton from 'components/common/VButton/VButton.vue';
 
 const appState = useAppState();
 const gameplayControl = useGameplayControl();
@@ -46,5 +46,5 @@ const gameplayControl = useGameplayControl();
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/game-interface/GameInterfaceOptions';
+@import './GameInterfaceOptions';
 </style>

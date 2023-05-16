@@ -6,8 +6,8 @@ import { useGameplayControl } from '@/stores/gameplay-control';
 import { useAppState } from '@/stores/app-state';
 
 import VSheet from 'components/sheet/VSheet.vue';
-import GameInterfaceEnd from './GameInterfaceEnd.vue';
-import GameInterfacePlay from './GameInterfacePlay.vue';
+import GameInterfaceEnd from '../GameInterfaceEnd/GameInterfaceEnd.vue';
+import GameInterfacePlay from '../GameInterfacePlay/GameInterfacePlay.vue';
 
 const currentView = shallowRef(GameInterfacePlay);
 
@@ -79,5 +79,5 @@ watch(answerState, () => {
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/game-interface/_GameInterface.scss';
+@import './GameInterface';
 </style>

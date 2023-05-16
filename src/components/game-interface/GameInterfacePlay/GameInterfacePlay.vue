@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import GameInterfaceOptions from './GameInterfaceOptions.vue';
-import GameInterfaceQuestion from './GameInterfaceQuestion.vue';
+import GameInterfaceOptions from '../GameInterfaceOptions/GameInterfaceOptions.vue';
+import GameInterfaceQuestion from '../GameInterfaceQuestion/GameInterfaceQuestion.vue';
 </script>
 
 <template>
