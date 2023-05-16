@@ -3,5 +3,7 @@ import GameInterface from 'components/game-interface/GameInterface/GameInterface
 </script>
 
 <template>
-  <game-interface></game-interface>
+  <div class="container">
+    <game-interface></game-interface>
+  </div>
 </template>
