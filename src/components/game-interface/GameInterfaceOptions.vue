@@ -30,31 +30,16 @@ const gameplayControl = useGameplayControl();
         </v-button>
       </div>
 
-      <div
-        v-else-if="appState.gameMode === 'flag-by-country'"
-        class="game-interface-options__items"
-      >
+      <div v-else class="game-interface-options__items">
         <button
-          v-for="(option, index) in gameplayControl.answers"
+          v-for="(url, index) in gameplayControl.flagUrl"
           :key="index"
           type="button"
           class="game-interface-options__item"
+          @click="gameplayControl.getUserAnswer(gameplayControl.answers[index])"
         >
-          <img :src="option" alt="flag" />
+          <img :src="url" alt="flag" />
         </button>
-      </div>
-
-      <div v-else class="game-interface-options__items">
-        <v-button
-          v-for="(option, index) in gameplayControl.answers"
-          :key="index"
-          :tag="'button'"
-          :color="'green'"
-          :block="true"
-          class="game-interface-options__item"
-        >
-          {{ option }}
-        </v-button>
       </div>
     </div>
   </div>
