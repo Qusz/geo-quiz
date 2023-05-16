@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import type { RestCountriesSorted, AnswerState } from '@/types';
+import type { RestCountriesSorted, AnswerState, GameMode } from '@/types';
 
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
@@ -16,7 +16,7 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
   const usedCountries: Ref<number[]> = ref([]);
   const question: Ref<string> = ref('');
   const answers: Ref<string[]> = ref([]);
-  const flagUrl: Ref<string> = ref('');
+  const flagUrl: Ref<string[]> = ref([]);
 
   const answerState: Ref<AnswerState> = ref(undefined);
   const userAnswer: Ref<string> = ref('');
@@ -34,20 +34,14 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
   };
 
   const _getAnswers = () => {
-    // Get correct answer
     answers.value.push(question.value);
 
-    // Get 3 incorrect asnwers
     while (answers.value.length < amountOfOptions) {
       const randomIndex = ArrayControl.getRandomIndex(gameData.value);
+      const currentAnswer = gameData.value[randomIndex].name;
 
-      switch (true) {
-        case answers.value.includes(gameData.value[randomIndex].name):
-        case randomIndex === currentCountryIndex:
-          break;
-        default:
-          answers.value.push(gameData.value[randomIndex].name);
-          break;
+      if (!answers.value.includes(currentAnswer) && randomIndex !== currentCountryIndex) {
+        answers.value.push(currentAnswer);
       }
     }
 
@@ -64,12 +58,20 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
     }
   };
 
-  const nextQuestion = () => {
+  const nextQuestion = (gameMode: GameMode) => {
     initAnswerState();
     _getCountry();
     _getAnswers();
 
-    flagUrl.value = gameData.value[currentCountryIndex].flag;
+    if (gameMode === 'country-by-flag') {
+      flagUrl.value.push(gameData.value[currentCountryIndex].flag);
+    } else {
+      answers.value.forEach((item) => {
+        const itemIndex = gameData.value.findIndex((country) => country.name === item);
+
+        flagUrl.value.push(gameData.value[itemIndex].flag);
+      });
+    }
   };
 
   const getUserAnswer = (input: string) => {
@@ -92,7 +94,7 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
     answerState.value = undefined;
     question.value = '';
     answers.value = [];
-    flagUrl.value = '';
+    flagUrl.value = [];
     userAnswer.value = '';
   };
 
@@ -103,7 +105,7 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
     question.value = '';
     answers.value = [];
     correctAnswers.value = 0;
-    flagUrl.value = '';
+    flagUrl.value = [];
     userAnswer.value = '';
   };
 
