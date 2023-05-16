@@ -23,4 +23,15 @@ const router = createRouter({
   ]
 });
 
+let isFirstLoad = true;
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/play' && isFirstLoad) {
+    isFirstLoad = false;
+    next('/new-game');
+  } else {
+    next();
+  }
+});
+
 export default router;
