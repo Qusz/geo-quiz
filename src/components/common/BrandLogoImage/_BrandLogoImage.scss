@@ -1,6 +1,10 @@
 .brand-logo-image {
   &__wrapper {
     width: rem(100px);
+
+    @media #{$screen-mobile} {
+      width: rem(60px);
+    }
   }
   
   &__image {
