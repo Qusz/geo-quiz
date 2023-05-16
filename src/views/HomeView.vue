@@ -2,8 +2,8 @@
 import { onMounted } from 'vue';
 
 import VSheet from 'components/sheet/VSheet.vue';
-import VButton from 'components/common/VButton.vue';
-import ListItem from 'components/common/ListItem.vue';
+import VButton from 'components/common/VButton/VButton.vue';
+import ListItem from 'components/common/ListItem/ListItem.vue';
 
 import { GAME_MODES } from '@/constants';
 import { useAppState } from '@/stores/app-state';
