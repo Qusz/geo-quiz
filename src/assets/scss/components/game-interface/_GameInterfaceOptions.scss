@@ -7,29 +7,29 @@
 
       position: relative;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       width: rem(250px);
+      height: rem(180px);
 
       cursor: pointer;
 
-      &::before {
-        position: absolute;
-        inset: 0;
-        z-index: $z-index-overlay;
+      filter: $drop-shadow-default;
+      &-flag {
+        object-fit: contain;
+        max-height: 100%;
 
-        width: 100%;
-        height: 100%;
-      
-        content: "";
+        position: relative;
+
         transition: $default-transition;
 
-        background-color: $aqua-haze;
-        opacity: 0;
-      }
-
-      &:hover {
-        &::before {
-          opacity: .6;
+        &:hover {
+          opacity: .8;
         }
+
+    
       }
     }
   }
