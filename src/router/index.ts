@@ -18,20 +18,14 @@ const router = createRouter({
     {
       path: '/play',
       name: 'PlayGame',
-      component: () => import('views/PlayGame/PlayGame.vue')
+      component: () => import('views/PlayGame/PlayGame.vue'),
+      beforeEnter: (to, from) => {
+        if (from.path !== '/new-game') {
+          router.push('/new-game');
+        }
+      }
     }
   ]
-});
-
-let isFirstLoad = true;
-
-router.beforeEach((to, from, next) => {
-  if (to.path === '/play' && isFirstLoad) {
-    isFirstLoad = false;
-    next('/new-game');
-  } else {
-    next();
-  }
 });
 
 export default router;
