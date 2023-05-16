@@ -11,10 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import TheNavbar from 'components/navbar/TheNavbar.vue';
-import TheFooter from 'components/footer/TheFooter.vue';
+import TheNavbar from 'components/navbar/TheNavbar/TheNavbar.vue';
+import TheFooter from 'components/footer/TheFooter/TheFooter.vue';
 </script>
 
 <style scoped lang="scss">
-@import 'assets/scss/layouts/DefaultLayout';
+@import './DefaultLayout';
 </style>
