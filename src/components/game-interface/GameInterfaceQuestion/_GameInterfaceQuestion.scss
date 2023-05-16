@@ -11,6 +11,10 @@
     width: rem(320px);
     height: rem(180px);
 
+    @media #{$screen-mobile} {
+      width: rem(260px);
+      height: rem(120px);
+    }
 
     &-img {
       max-height: 100%;
