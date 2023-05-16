@@ -12,10 +12,7 @@ const appState = useAppState();
 
 onMounted(() => {
   appState.gameModeReset();
-
-  if (appState.state !== 'select-menu') {
-    appState.setToSelectMenu();
-  }
+  appState.changeStateTo('select-menu');
 });
 </script>
 
