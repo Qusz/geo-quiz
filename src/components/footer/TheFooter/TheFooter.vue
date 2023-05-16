@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FooterCopyright from './FooterCopyright.vue';
+import FooterCopyright from '../FooterCopyright/FooterCopyright.vue';
 </script>
 
 <template>
@@ -11,5 +11,5 @@ import FooterCopyright from './FooterCopyright.vue';
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/footer/TheFooter';
+@import './TheFooter';
 </style>
