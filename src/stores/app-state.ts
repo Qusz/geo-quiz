@@ -12,8 +12,12 @@ export const useAppState = defineStore('app-state', () => {
 
   const routes = new Routes();
 
-  const toMenu = () => {
+  const setToSelectMenu = () => {
     state.value = 'select-menu';
+  };
+
+  const toMenu = () => {
+    setToSelectMenu();
     routes.toMainMenu();
   };
 
@@ -28,12 +32,6 @@ export const useAppState = defineStore('app-state', () => {
           break;
         case 'country-by-flag':
           gameMode.value = 'country-by-flag';
-          break;
-        case 'capital-by-country':
-          gameMode.value = 'capital-by-country';
-          break;
-        case 'country-by-capital':
-          gameMode.value = 'country-by-capital';
           break;
         case undefined:
           break;
@@ -72,6 +70,7 @@ export const useAppState = defineStore('app-state', () => {
   return {
     state,
     gameMode,
+    setToSelectMenu,
     toMenu,
     startGame,
     winGame,
