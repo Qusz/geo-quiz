@@ -12,18 +12,19 @@ export const useAppState = defineStore('app-state', () => {
 
   const routes = new Routes();
 
-  const setToSelectMenu = () => {
-    state.value = 'select-menu';
+  const changeStateTo = (value: AppState) => {
+    if (state.value !== value) {
+      state.value = value;
+    }
   };
 
   const toMenu = () => {
-    setToSelectMenu();
+    changeStateTo('select-menu');
     routes.toMainMenu();
   };
 
   const startGame = (mode: GameMode) => {
-    if (state.value === 'play') return;
-    state.value = 'play';
+    changeStateTo('play');
 
     try {
       switch (mode) {
@@ -47,15 +48,11 @@ export const useAppState = defineStore('app-state', () => {
   };
 
   const loseGame = () => {
-    if (state.value !== 'lose') {
-      state.value = 'lose';
-    }
+    changeStateTo('lose');
   };
 
   const winGame = () => {
-    if (state.value !== 'win') {
-      state.value = 'win';
-    }
+    changeStateTo('win');
   };
 
   const gameModeReset = () => {
@@ -69,8 +66,8 @@ export const useAppState = defineStore('app-state', () => {
 
   return {
     state,
+    changeStateTo,
     gameMode,
-    setToSelectMenu,
     toMenu,
     startGame,
     winGame,
