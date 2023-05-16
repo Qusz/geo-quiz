@@ -14,8 +14,7 @@
       max-height: 100%;
       object-fit: contain;
 
-     filter: drop-shadow(0px 8px 9px rgba(0, 0, 0, .3));
-
+     filter: $drop-shadow-default;
     }
   }
 
