@@ -12,5 +12,9 @@
     font-weight: $font-weight-bold;
 
     color: $cutty-sark;
+
+    @media #{$screen-mobile} {
+      font-size: rem($font-size-24);
+    }
   }
 }
