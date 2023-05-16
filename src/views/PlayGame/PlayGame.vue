@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GameInterface from 'components/game-interface/GameInterface.vue';
+import GameInterface from 'components/game-interface/GameInterface/GameInterface.vue';
 </script>
 
 <template>

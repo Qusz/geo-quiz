@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 
-import VButton from 'components/common/VButton.vue';
+import VButton from 'components/common/VButton/VButton.vue';
 import VSheet from 'components/sheet/VSheet.vue';
 
 import { GAME_MODES } from '@/constants';
@@ -41,5 +41,5 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/views/NewGame';
+@import './NewGame';
 </style>
