@@ -47,5 +47,5 @@ onMounted(() => {
 </template>
 
 <style scope lang="scss">
-@import 'assets/scss/views/HomeView';
+@import './HomeView';
 </style>
