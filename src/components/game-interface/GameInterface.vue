@@ -54,7 +54,7 @@ watch(answerState, () => {
 
   switch (answerState.value) {
     case 'initial':
-      gameplayControl.nextQuestion();
+      gameplayControl.nextQuestion(appState.gameMode);
       break;
     case 'correct':
       handleCorrectAnswer();
