@@ -70,7 +70,7 @@ watch(answerState, () => {
 
 <template>
   <div class="game-interface">
-    <div class="game-interface__wrapper container">
+    <div class="game-interface__wrapper">
       <v-sheet class="game-interface__content">
         <component :is="currentView"></component>
       </v-sheet>
