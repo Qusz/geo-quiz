@@ -13,7 +13,7 @@ const gameplayControl = useGameplayControl();
     </div>
 
     <div v-else-if="appState.gameMode === 'country-by-flag'" class="game-interface-question__flag">
-      <img :src="gameplayControl.flagUrl" alt="flag" class="game-interface-question__flag-img" />
+      <img :src="gameplayControl.flagUrl[0]" alt="flag" class="game-interface-question__flag-img" />
     </div>
 
     <div v-else class="game-interface-question__text">
