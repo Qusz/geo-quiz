@@ -11,5 +11,5 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import 'assets/scss/components/sheet/VSheet';
+@import './VSheet';
 </style>
