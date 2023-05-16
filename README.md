@@ -6,6 +6,10 @@ This is a geography game built with Vue and TypeScript. The game allows you to t
 
 ## Features
 
+## Live demo
+
+https://geo-quiz-psi.vercel.app/
+
 - Two game modes: "Guess Country by Flag" and "Guess Flag by Country"
 - Interactive user interface
 - Pinia for state management
