@@ -22,7 +22,7 @@ onMounted(() => {
         <h1 class="home__title">Welcome to GeoQuiz!</h1>
         <div class="home__text-block">
           <p class="home__text-block-paragraph">
-            Test your geography knowledge in four different game modes:
+            Test your geography knowledge in two different game modes:
           </p>
 
           <ul class="home__text-block-list">
