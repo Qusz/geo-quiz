@@ -1,0 +1,19 @@
+.game-interface-play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  min-height: rem(400px);
+
+  @media #{$screen-mobile} {
+    min-height: rem(480px);
+  }
+  
+  &__wrapper {
+    display: grid;
+  }
+
+  &__spinner {
+    justify-self: center;
+  }
+}
