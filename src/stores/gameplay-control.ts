@@ -91,6 +91,7 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
   const validateUserAnswer = () => {
     if (userAnswer.value === question.value) {
       answerState.value = 'correct';
+      toast.success('Correct!', { autoClose: 300 });
     } else {
       answerState.value = 'incorrect';
     }
