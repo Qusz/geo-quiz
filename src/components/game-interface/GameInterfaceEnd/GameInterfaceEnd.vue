@@ -12,22 +12,8 @@ const gameplayControl = useGameplayControl();
       <div v-if="appState.state === 'lose'" class="game-interface-end__item">
         <p class="game-interface-end__message">You lost :/</p>
 
-        <p
-          v-if="appState.gameMode === 'country-by-flag' || appState.gameMode === 'flag-by-country'"
-          class="game-interface-end__result"
-        >
+        <p class="game-interface-end__result">
           Your guessed {{ gameplayControl.correctAnswers }} flags.
-        </p>
-
-        <p
-          v-else-if="appState.gameMode === 'capital-by-country'"
-          class="game-interface-end__result"
-        >
-          Your guessed {{ gameplayControl.correctAnswers }} capitals.
-        </p>
-
-        <p v-else class="game-interface-end__result">
-          Your guessed {{ gameplayControl.correctAnswers }} countries.
         </p>
       </div>
 
