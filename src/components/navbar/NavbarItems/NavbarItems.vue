@@ -9,6 +9,7 @@ const navbarItems: NavbarItemType[] = [
   {
     name: 'New Game',
     tag: 'button',
+    type: 'button',
     buttonColor: 'green',
     action: () => appState.toMenu()
   }
@@ -22,6 +23,7 @@ const navbarItems: NavbarItemType[] = [
       :key="index"
       :page-name="item.route"
       :button-tag="item.tag"
+      :button-type="item.type"
       :button-color="item.buttonColor"
       :button-shape="item.buttonShape"
       @click="item.action && item.action()"
