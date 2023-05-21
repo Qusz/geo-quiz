@@ -12,12 +12,8 @@ const gameplayControl = useGameplayControl();
       <p>Which one is the flag of {{ gameplayControl.question }}?</p>
     </div>
 
-    <div v-else-if="appState.gameMode === 'country-by-flag'" class="game-interface-question__flag">
+    <div v-else class="game-interface-question__flag">
       <img :src="gameplayControl.flagUrl[0]" alt="flag" class="game-interface-question__flag-img" />
-    </div>
-
-    <div v-else class="game-interface-question__text">
-      <p>{{ gameplayControl.question }}</p>
     </div>
   </div>
 </template>
