@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
   <li class="navbar-item">
-    <v-button :tag="buttonTag" :color="buttonColor" :shape="buttonShape">
+    <v-button :tag="buttonTag" :color="buttonColor" :shape="buttonShape" :type="buttonType">
       <slot></slot>
     </v-button>
   </li>
