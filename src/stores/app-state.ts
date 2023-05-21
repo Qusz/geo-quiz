@@ -4,6 +4,8 @@ import type { Ref } from 'vue';
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 
+import { toast } from 'vue3-toastify';
+
 import Routes from 'utils/router-push';
 
 export const useAppState = defineStore('app-state', () => {
@@ -40,8 +42,13 @@ export const useAppState = defineStore('app-state', () => {
           throw new Error(`Unexpected value of gameMode: ${gameMode.value}`);
       }
     } catch (error) {
-      // TODO add error handling
-      console.log(error);
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error('Something went wrong...');
+      }
+
+      return;
     }
 
     routes.toPlay();
