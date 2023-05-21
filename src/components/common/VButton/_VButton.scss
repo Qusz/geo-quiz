@@ -25,33 +25,4 @@
   &--sienna {
     @include button-color($burnt-sienna, $clr-text-inverse);
   }
-
-  &--white {
-    background-color: $white;
-
-    box-shadow: $box-shadow-base;
-
-    &:hover {
-      color: $burnt-sienna;
-    }
-
-    &:active {
-      color: $clr-text;
-    }
-  }
-
-  &--plain {
-    min-width: unset;
-    padding: 0;
-
-    border-radius: none;
-    
-    &:hover {
-      color: $burnt-sienna;
-    }
-
-    &:active {
-      color: $clr-text;
-    }
-  }
 }
