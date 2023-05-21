@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
 import Vue3Toasity, { type ToastContainerOptions } from 'vue3-toastify';
+import { toast } from 'vue3-toastify';
 
 import App from './App.vue';
 import router from './router';
@@ -13,10 +14,13 @@ import 'assets/scss/main.scss';
 const app = createApp(App);
 
 app.use(Vue3Toasity, {
-  multiple: false,
+  limit: 1,
   position: 'top-center',
   hideProgressBar: true,
-  theme: 'colored'
+  pauseOnHover: true,
+  closeButton: false,
+  theme: 'colored',
+  transition: toast.TRANSITIONS.SLIDE
 } as ToastContainerOptions);
 
 app.use(createPinia());
