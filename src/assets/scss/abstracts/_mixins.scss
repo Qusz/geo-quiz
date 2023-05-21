@@ -9,8 +9,10 @@
   color: $text-color;
   background-color: $bg-color;
 
-  &:hover {
-    background-color: lighten($bg-color, 8);
+  @media (hover: hover) {
+    &:hover {
+      background-color: lighten($bg-color, 8);
+    }
   }
 
   &:active {
