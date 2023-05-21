@@ -19,6 +19,4 @@ const props = defineProps<{
   </li>
 </template>
 
-<style scoped lang="scss">
-@import './NavbarItem';
-</style>
+<style scoped lang="scss"></style>
