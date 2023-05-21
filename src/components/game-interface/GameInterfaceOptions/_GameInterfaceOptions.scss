@@ -16,8 +16,10 @@
         transition: $default-transition;
         filter: $drop-shadow-default;
 
-        &:hover {
-          opacity: .8;
+        @media (hover: hover) {
+          &:hover {
+            opacity: .8;
+          }
         }
 
         @media #{$screen-mobile} {
