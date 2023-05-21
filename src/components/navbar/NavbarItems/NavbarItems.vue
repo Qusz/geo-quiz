@@ -8,7 +8,7 @@ const appState = useAppState();
 const navbarItems: NavbarItemType[] = [
   {
     name: 'New Game',
-    tag: 'div',
+    tag: 'button',
     buttonColor: 'green',
     action: () => appState.toMenu()
   }
