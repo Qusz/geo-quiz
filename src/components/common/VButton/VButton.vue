@@ -17,9 +17,7 @@ const props = defineProps<{
       'button',
       {
         'button--green': color === 'green',
-        'button--white': color === 'white',
         'button--sienna': color === 'sienna',
-        'button--plain': shape === 'plain',
         'button--block': block === true
       }
     ]"
