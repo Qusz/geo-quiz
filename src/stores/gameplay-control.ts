@@ -4,6 +4,8 @@ import type { RestCountriesSorted, AnswerState, GameMode } from '@/types';
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 
+import { toast } from 'vue3-toastify';
+
 import { useGameData } from '@/composables/useGameData';
 
 import ArrayControl from '@/utils/array-control';
@@ -49,7 +51,15 @@ export const useGameplayControl = defineStore('gameplay-control', () => {
   };
 
   const getData = async () => {
-    gameData.value = (await useGameData()).data;
+    try {
+      gameData.value = (await useGameData()).data;
+    } catch (error) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error('Something went wrong...');
+      }
+    }
   };
 
   const initAnswerState = () => {
