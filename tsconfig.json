@@ -35,7 +35,9 @@
     "strictNullChecks": true,
     "lib": ["DOM", "ES2021"],
     "types": ["node"],
-    "ignoreDeprecations": "5.0"
+    "preserveValueImports": false,
+    "importsNotUsedAsValues": "remove",
+    "verbatimModuleSyntax": true,
   },
   "references": [
     {
