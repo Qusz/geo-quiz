@@ -1,35 +1,29 @@
 .game-interface-options {
-  margin-top: rem($gap-l);
+  margin-top: rem($gap-m);
 
   &--flags & {
     &__item {
       all: unset;
 
-      position: relative;
-
       display: flex;
-      align-items: center;
       justify-content: center;
-
-      width: rem(250px);
-      height: rem(180px);
-
       cursor: pointer;
 
-      filter: $drop-shadow-default;
       &-flag {
-        object-fit: contain;
-        max-height: 100%;
-
-        position: relative;
+        max-width: rem(220px);
+        max-height: rem(180px);
 
         transition: $default-transition;
+        filter: $drop-shadow-default;
 
         &:hover {
           opacity: .8;
         }
 
-    
+        @media #{$screen-mobile} {
+          max-width: rem(180px);
+          max-height: rem(120px);
+        }
       }
     }
   }
@@ -37,7 +31,8 @@
   &__items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
+    justify-content: center;
+    align-items: start;
     gap: rem($gap-xs);
 
     @media #{$screen-mobile} {
